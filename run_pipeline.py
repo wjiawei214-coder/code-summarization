@@ -39,8 +39,8 @@ def get_args():
                         help="Test-time ablation: zero_shot, standard, draft_mmr, or random")
     parser.add_argument('--mmr_lambda', type=float, default=0.5,
                         help="MMR relevance weight; higher values favor relevance")
-    parser.add_argument('--algo_mode', type=str, default='meta_rag',
-                        choices=['meta_rag', 'reptile', 'maml'])
+    parser.add_argument('--algo_mode', type=str, default='reptile',
+                        choices=['reptile', 'maml'])
 
     # Meta-learning parameters
     parser.add_argument("--inner_steps_train", type=int, default=3, help="Number of training inner-loop steps")
